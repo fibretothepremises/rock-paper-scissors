@@ -56,8 +56,7 @@
         let numberOfRounds = 5;
         //// create a variable that keeps score of player and computer
         let playerScore = 0;
-        let computerScore = 0;
-        
+        let computerScore = 0;    
         //// loop the round() according to constant
         while (numberOfRounds > 0) {
             //// use prompt to get input from the user at each round
@@ -69,7 +68,6 @@
                 playerSelection = prompt('You must choose between rock, paper, scissors. Try again!', '');
                 playerSelection = playerSelection.toUpperCase();
             }
-
             //// call round() function and store the returned value in a variable called result
             let result = round(playerSelection, computerPlay());
             //// using regex and test(), conduct 3 tests for a match for the word 'win', 'tie' and 'lose' and playerScore++, or do nothing, computerScore++ accordingly.
@@ -93,8 +91,13 @@
                     console.log(playerScore);
                     console.log(computerScore);
                     break;
-
             }
         }
         return (playerScore > computerScore) ? `you won THE GAME!!!` : `you lost the game :(((`;
     }
+    // When button is clicked, call round() function with correct playerSelection
+    function callRound(e) {
+        e.id
+    }
+    window.addEventListener('click', callRound);
+    game();
