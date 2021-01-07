@@ -1,0 +1,220 @@
+:root {
+    --orange: rgb(243, 117, 0);
+    --yellow: rgb(245, 220, 0);
+    --green: rgb(2, 184, 2);
+    --white: #d9d9d9;
+    --grey: #999999;
+    --red: rgb(190, 7, 7);
+}
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html {
+    font-family: KoreanFont,georgia,serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.876);
+    color: var(--white);
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: 0 50px;
+}
+
+h1 {
+    height: 24vh;
+    line-height: 24vh;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: .6rem;
+}
+
+h2 {
+    height: 24vh;
+    line-height: 24vh;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: .6rem;
+    transition: all 2.5s ease;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+
+    display: none;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 100%;
+    margin: auto;
+    z-index: 100;
+}
+
+.h2-show {
+    display: grid;
+    font-size: 8rem;
+    opacity: 1;
+
+}
+
+.computer {
+    text-align: right;
+}
+
+/* SCOREBOARD */
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    width: 100%;
+    padding: 0 50px;
+}
+
+.healthbar {
+    box-sizing: content-box;
+    height: 50px;
+    width: 500px;
+    border: 5px solid black;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.301);;
+}
+
+.hp {
+    height: 50px;
+    box-sizing: content-box;
+    width: 500px;
+    border-radius: 20px;
+    background: var(--green);
+    transition: all 0.5s ease-out;
+}
+
+/* BATTLEGROUND */
+
+.battleground {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 50vh;
+}
+.avatar {
+    border: 5px solid black;
+    width: 508px;
+    border-radius: 20px;
+}
+.flip {
+    transform: scaleX(-1);
+}
+
+h3 {
+    font-size: 5rem;
+    text-transform: none;
+    color: var(--white);
+    text-shadow: 3px 3px rgb(228, 121, 0);
+}
+
+/* PROMPT */
+
+#prompt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Radiance', serif;
+
+    transition: all 2s ease;
+    line-height: 5rem;
+    height: 290px;
+    padding: 20px;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: initial;
+    letter-spacing: .2rem;
+
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    height: 20vh;
+    width: 550px;
+    margin: auto;
+    transition: all 1s ease;
+    opacity: 1;
+}
+.btn {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--grey);
+    box-shadow: 2px 4px 5px 2px rgba(8, 8, 8, 0.829);
+    margin: 12px;
+    transition: all .25s ease;
+}
+.btn:hover {
+    border: 4px solid var(--yellow);
+    border-radius: 5px;
+    transform: scale(1.15,1.15);
+    cursor: pointer;
+}
+.btn:focus {
+    outline: none;
+}
+.skill-name {
+    text-align: center;
+    color: var(--grey);
+}
+
+/* RESET */
+
+.reset {
+    position: fixed;
+    bottom: 0;
+
+    display: none;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 20vh;
+    width: 100%;
+    margin: auto;
+    
+}
+
+.btn-reset {
+    margin-top: 12px;
+    display: none;
+    height: 90px;
+    width: 460px;
+    border-radius: 5px;
+    font-size: 3rem;
+    font-family: KoreanFont,georgia,serif;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 5s ease;
+    opacity: 0;
+
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    background: radial-gradient(rgb(6, 187, 6), rgb(6, 109, 6))
+}
+
+.btn-reset:hover {
+    box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.315);
+}
